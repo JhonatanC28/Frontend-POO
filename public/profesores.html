@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Panel Profesor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="profesores.html">Profesor</a>
+    <button id="btnLogout" class="btn-secondary" style="margin-left:auto; background:#e74c3c">
+      ⎋ Cerrar sesión
+    </button>
+  </nav>
+
+  <main>
+    <div class="panel">
+      <button id="btnNota">➕ Agregar Notas</button>
+      <button id="btnFalta">➕ Agregar Faltas</button>
+      <button id="btnAsignar">👥 Asignar Estudiantes</button>
+      <button id="btnHorario">⏰ Definir Horarios</button>
+      <button id="btnCupos">📊 Ver Cupos</button>
+
+      <!-- FORMULARIOS -->
+      <form id="formNota" class="hidden">
+        <h3>Agregar Nota</h3>
+        <input id="notaEst" placeholder="ID Estudiante" required>
+        <select id="notaCurso"></select>
+        <input id="notaValor" type="number" min="0" max="100" required placeholder="Nota">
+        <button type="submit">Guardar Nota</button>
+      </form>
+
+      <form id="formFalta" class="hidden">
+        <h3>Agregar Falta</h3>
+        <input id="faltaEst" placeholder="ID Estudiante" required>
+        <input id="faltaFecha" type="date" required>
+        <input id="faltaMotivo" placeholder="Motivo" required>
+        <button type="submit">Guardar Falta</button>
+      </form>
+
+      <form id="formAsignar" class="hidden">
+        <h3>Asignar Curso a Estudiante</h3>
+        <input id="asigEst" placeholder="ID Estudiante" required>
+        <select id="asigCurso"></select>
+        <button type="submit">Asignar</button>
+      </form>
+
+      <form id="formHorario" class="hidden">
+        <h3>Definir Horario</h3>
+        <select id="horCurso"></select>
+        <input id="horDia" placeholder="Lunes, Martes..." required>
+        <input id="horHora" type="time" required>
+        <button type="submit">Guardar Horario</button>
+      </form>
+
+      <!-- Resultado dinámico -->
+      <div id="tablaHorarios"></div>
+      <div id="resultProf"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Registro Académico. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

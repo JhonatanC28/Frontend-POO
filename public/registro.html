@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Login</a>
+    <a href="registro.html">Registro</a>
+  </nav>
+  <main>
+    <h1>Registro de Usuario</h1>
+    <form id="formRegistro">
+      <label for="reg_nombre">Nombre</label>
+      <input id="reg_nombre" type="text" required>
+
+      <label for="reg_email">Email</label>
+      <input id="reg_email" type="email" required>
+
+      <label for="reg_pass">Contraseña</label>
+      <input id="reg_pass" type="password" required>
+
+      <label for="reg_rol">Rol</label>
+      <select id="reg_rol" required>
+        <option value="">Seleccione</option>
+        <option value="estudiante">Estudiante</option>
+        <option value="profesor">Profesor</option>
+      </select>
+
+      <button type="submit">Registrar</button>
+    </form>
+    <div id="msgRegistro" class="msg"></div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Registro Académico. Todos los derechos reservados.</p> 
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

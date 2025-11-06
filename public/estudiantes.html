@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Estudiantes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="estudiantes.html">Estudiante</a>
+    <button id="btnLogout" class="btn-secondary" style="margin-left:auto; background:#e74c3c">
+      ⎋ Cerrar sesión
+    </button>
+  </nav>
+
+  <main>
+    <div class="panel">
+      <button id="btnRegistroCarrera">📘 Registro a Carrera</button>
+      <button id="btnNotas">📊 Consultar Notas</button>
+      <button id="btnFaltas">⚠️ Consultar Faltas</button>
+      <button id="btnHorarios">⏰ Consultar Horarios</button>
+      <button id="btnCarrera">🎓 Consultar Carrera y Cursos</button>
+      <button id="btnBorrarCarrera">🗑️ Borrar Carrera</button>
+      <br>
+      <h2>Panel del Estudiante</h2>
+    </div>
+
+    <!-- REGISTRO -->
+    <section id="secRegistro" class="hidden">
+      <h3>Registro a Carrera</h3>
+      <form id="formCarrera">
+        <select id="carreraSelect" required>
+          <option value="">-- Seleccione carrera --</option>
+        </select>
+        <button type="submit">Inscribirme</button>
+      </form>
+      <div id="msgCarrera"></div>
+    </section>
+
+    <!-- NOTAS -->
+    <section id="secNotas" class="hidden">
+      <h3>Mis Notas</h3>
+      <div id="resultNotas"></div>
+    </section>
+
+    <!-- FALTAS -->
+    <section id="secFaltas" class="hidden">
+      <h3>Mis Faltas</h3>
+      <div id="resultFaltas"></div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="secHorarios" class="hidden">
+      <h3>Horarios de tu Carrera</h3>
+      <div id="resultHorarios"></div>
+    </section>
+
+    <!-- CARRERA Y CURSOS -->
+    <section id="secCarrera" class="hidden">
+      <h3>Mi Carrera y Cursos</h3>
+      <div id="resultCarrera"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Registro Académico. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

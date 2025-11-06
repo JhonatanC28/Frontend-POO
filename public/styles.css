@@ -1,0 +1,159 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+  background: url('./fond.jpg') center/cover fixed;
+  min-height: 100vh;
+  padding-top: 60px;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: #2c3e50; color: #fff; padding: 10px 20px;
+  display: flex; gap: 20px; align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+nav a { color: #ecf0f1; text-decoration: none; font-weight: bold; }
+nav a:hover { color: #1abc9c; }
+
+/* Contenido */
+main {
+  max-width: 800px; margin: 20px auto;
+  background: rgba(255, 255, 255, 0.5); padding: 25px;
+  border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+h1{color: #ccc;}
+h2,h3 { margin-bottom: 15px; color: #2c3e50; }
+
+/* Formularios */
+form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+input, select { padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+input:focus, select:focus { border-color: #1abc9c; outline: none; }
+
+/* Botones */
+button {
+  padding: 12px; border: none; border-radius: 6px;
+  background: #1abc9c; color: #000000; font-weight: bold;
+  cursor: pointer; transition: 0.3s;
+}
+button:hover { background: #16a085; }
+
+/* Helpers */
+.hidden { display: none; }
+.msg { margin-top: 10px; padding: 10px; border-radius: 5px; }
+.msg p { margin: 0; }
+.msg.success { background: #d4edda; color: #155724; }
+.msg.error { background: #f8d7da; color: #721c24; }
+
+/* Footer */
+footer {
+  text-align: center; padding: 15px; background: #2c3e50; color: #ecf0f1;
+  position: fixed; bottom: 0; width: 100%;
+}
+footer p { margin: 0; font-size: 14px; }
+nav .logout {
+  margin-left: auto;
+  background: #e74c3c;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+nav .logout:hover { background: #c0392b; }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.panel button {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.panel {
+  display: flex;
+  flex-direction: row;   /* ← en fila */
+  flex-wrap: wrap;       /* ← permite que bajen a otra línea si no caben */
+  justify-content: center; /* ← centrados horizontalmente */
+  gap: 15px;             /* ← separación entre botones */
+  padding: 20px;
+}
+
+.panel button {
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #1abc9c;
+  color: #000;
+  transition: 0.3s;
+}
+
+.panel button:hover {
+  background: #16a085;
+}
+
+/* ================= EQUIPO ================= */
+.team {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.team h3 {
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #2c3e50;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Para que en pantallas pequeñas se acomoden */
+}
+
+.member {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.member img {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.member p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.member strong {
+  color: #1abc9c;
+  font-size: 1.1em;
+}

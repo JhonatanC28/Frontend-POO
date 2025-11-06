@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Login</a>
+    <a href="registro.html">Registro</a>
+  </nav>
+  <main>
+    <h1>Iniciar Sesión</h1>
+    <form id="formLogin">
+      <label for="login_email">Email</label>
+      <input id="login_email" type="email" placeholder="Email" required>
+      
+      <label for="login_pass">Contraseña</label>
+      <input id="login_pass" type="password" placeholder="Contraseña" required>
+      
+      <button type="submit">Ingresar</button>
+    </form>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    <div id="msgLogin" class="msg"></div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Registro Académico. Todos los derechos reservados.</p> 
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
